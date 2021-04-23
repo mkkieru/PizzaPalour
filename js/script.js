@@ -20,5 +20,5 @@ function order() {
 
     var result = new pizza(Size, Crust, Topping);
 
-    console.log(location);
+    alert("Your order will be delivered to " + location);
 }
