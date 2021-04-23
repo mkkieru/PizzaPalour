@@ -8,28 +8,29 @@
     <link rel="stylesheet" href="./img/12-04.jpg">
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/script.js"></script>
+
     <title>Pizza Palour</title>
 </head>
 
 <body style="text-align: center;">
     <p>
         <label for="size">Select size desired </label>
-        <select class="size">
-        <option> </option>
-        <option>SMALL</option>
-        <option>MEDIUM</option>
-        <option>LARGE</option>
-    </select>
+        <select id="size">
+            <option ></option>
+            <option >SMALL</option>
+            <option >MEDIUM</option>
+            <option >LARGE</option>
+        </select>
     </p>
     <br>
 
     <p>
         <label for="crust">Select crust desired </label>
-        <select class="crust">
+        <select id="crust">
         <option> </option>
-        <option>CRISPY</option>
-        <option>STUFFED</option>
-        <option>GLUTEN-FREE</option>
+        <option >CRISPY</option>
+        <option >STUFFED</option>
+        <option >GLUTEN-FREE</option>
     </select>
 
     </p>
@@ -37,19 +38,19 @@
     <br>
 
     <p>
-        <label for="crust">Select desired toppings</label>
-        <select class="crust">
+        <label for="topping">Select desired toppings</label>
+        <select id="topping">
             <option> </option>
-            <option>Pepperoni</option>
-            <option>Mushrooms</option>
-            <option>Onions</option>
-            <option>Sausage</option>
-            <option>Bacon</option>
-            <option>Extra cheese</option>
-            <option>Black olives</option>
-            <option>Green peppers</option>
-            <option>Pineapple</option>
-            <option>Spinach</option>
+            <option >Pepperoni</option>
+            <option >Mushrooms</option>
+            <option >Onions</option>
+            <option >Sausage</option>
+            <option >Bacon</option>
+            <option >Extra cheese</option>
+            <option >Black olives</option>
+            <option >Green peppers</option>
+            <option >Pineapple</option>
+            <option >Spinach</option>
         </select>
     </p>
 
@@ -64,15 +65,15 @@
 
     <p>
         <label for="delivery">delivered</label>
-        <input type="radio" name="1">
+        <input type="radio" name="1" id="deliver">
 
         <label for="delivery">Pick up</label>
-        <input type="radio" name="1">
+        <input type="radio" name="1" id="pickUp">
     </p>
 
 
     <br>
-    <button>Place order </button>
+    <button onclick="order()">Place order </button>
     <button>Checkout </button>
 
 </body>
