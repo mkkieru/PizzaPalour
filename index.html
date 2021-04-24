@@ -8,38 +8,164 @@
     <link rel="stylesheet" href="./img/12-04.jpg">
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <title>Pizza Palour</title>
 </head>
 
-<body style="text-align: center;">
-    <p>
+<body>
+
+    <header class="container">
+        <img src="./img/ivan-torres-MQUqbmszGGM-unsplash (1).jpg" alt="">
+
+        <p class="fLeft"><strong><em>Pizza Palour</em></strong></p>
+
+        <p class="fRight">
+            <a href="#orderNow">Order now</a>
+        </p>
+    </header>
+    <div class="showCase">
+        <p>
+            Pizza palour is a newly opened restaurant that aims for nothing but to please.
+        </p>
+    </div>
+
+    <div class="bei">
+        <h2>PRICES ARE AS FOLLOWS :</h2>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <form id="submission-form">
         <label for="size">Select size desired </label>
-        <select id="size">
-            <option value="1"></option>
-            <option>SMALL</option>
-            <option >MEDIUM</option>
-            <option >LARGE</option>
+        <select class="input" id="size">
+                <option value="1"></option>
+                <option>SMALL</option>
+                <option >MEDIUM</option>
+                <option >LARGE</option>
         </select>
-    </p>
-    <br>
 
-    <p>
-        <label for="crust">Select crust desired </label>
-        <select id="crust">
-        <option value="2"> </option>
-        <option >CRISPY</option>
-        <option >STUFFED</option>
-        <option >GLUTEN-FREE</option>
-    </select>
+        <label for="crust">Select crust desired </label><br>
+        <select class="input" id="crust">
+                <option value="2"> </option>
+                <option >CRISPY</option>
+                <option >STUFFED</option>
+                <option >GLUTEN-FREE</option>
+        </select>
 
-    </p>
-
-    <br>
-
-    <p>
         <label for="topping">Select desired toppings</label>
-        <select id="topping">
+        <select class="input" id="topping">
             <option value="3"></option>
             <option >Pepperoni</option>
             <option >Mushrooms</option>
@@ -49,39 +175,30 @@
             <option >Black olives</option>
             <option >Green peppers</option>
         </select>
-    </p>
 
-    <br>
-
-    <p>
         <label for="number">How many pizzas</label>
-        <input type="number" name="" id="number" placeholder="How many ">
-    </p>
+        <input class="input" type="number" name="" id="number">
 
-    <br>
+        <div class="delivery-options">
+            <label for="delivery">delivered</label>
+            <input type="radio" name="1" id="deliver">
 
-    <p>
-        <label for="delivery">delivered</label>
-        <input type="radio" name="1" id="deliver">
+            <label for="delivery">Pick up</label>
+            <input type="radio" name="1" id="pickUp">
+        </div>
 
-        <label for="delivery">Pick up</label>
-        <input type="radio" name="1" id="pickUp">
-    </p>
+        <button class="btns" onclick="pizzaOrder()">Place order </button>
+        <button class="btns" id="toggle" onclick="checkout()"> CHECKOUT</button>
 
+        <p id="hidden">
+            These are your orders
+        </p>
 
-    <br>
-    <button onclick="pizzaOrder()">Place order </button>
+        <ul style="list-style-type: none; display: none;"></ul>
+        <p id="demo">
 
-    <button id="toggle" onclick="checkout()"> CHECKOUT</button>
-
-    <p id="hidden">
-        These are your orders
-    </p>
-
-    <ul style="list-style-type: none; display: none;"></ul>
-    <p id="demo">
-
-    </p>
+        </p>
+    </form>
 
 </body>
 
