@@ -6,8 +6,8 @@ function pizzaOrder() {
         this.crust = crust;
         this.topping = topping;
     };
-
-
+    event.preventDefault();
+    //event.preventDefault();
 
 
     var newSize = document.getElementById("size").value;
@@ -15,85 +15,39 @@ function pizzaOrder() {
     var newTopping = document.getElementById("topping").value;
     var newDeliver = document.getElementById("deliver").checked;
     var newPickUp = document.getElementById("pickUp").checked;
+    var total = document.getElementById("number").value;
+    var newMark;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    if (newDeliver === true) {
-        var location = prompt("Where would you like it delivered : ");
-    } else if (newPickUp === true) {
-        alert("Your order will be ready in 20 minutes.");
+    if (total === '') {
+        alert("Please Input how many pizzas you want :");
     } else {
-        alert("Would you like it  delivered or you will pick it up");
+        for (var i = 0; i < total; i++) {
+            newMark = new pizza(newSize, newCrust, newTopping)
+                //order.push(newMark);
+
+            $(document).ready(function() {
+                $("ol").append("<li>" + newMark.size + " " + newMark.crust + " " + newMark.topping + " " + "</li>");
+                //$("#size").empty();
+                //$("#crust").empty();
+                //$("#topping").empty();
+            });
+            document.getElementById("size") = null;
+        }
 
     }
-
-
-    var result = new pizza(newSize, newCrust, newTopping);
-
-    alert("Your order will be delivered to " + location);
 }
 
-var order = [];
-
-
-
-
-
-
-
-// code to print orders but prints out final value of num  total times 
-
 // function checkout() {
-//     var total = document.getElementById("number").value;
-
-//     for (var num = 0; num < total; num += 1) {
-
+//     for (var add = 0; add < order.length; add++) {
 //         $(document).ready(function() {
-//             $("ol").append("<li>" + num + "</li>");
+//             $("ol").append("<li>" + order[add] + "</li>");
 //         });
-//     }
+//     };
+
 // }
+// for (var add = 0; add < order.length; add++) {
+
+//     //         $(document).ready(function() {
+//     //             $("ol").append("<li>" + num + "</li>");
+//     //         });
+//     //     }
