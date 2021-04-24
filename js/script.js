@@ -1,3 +1,9 @@
+function pizza(size, crust, topping) {
+    this.size = size;
+    this.crust = crust;
+    this.topping = topping;
+};
+
 function pizzaOrder() {
 
 
@@ -6,8 +12,7 @@ function pizzaOrder() {
         this.crust = crust;
         this.topping = topping;
     };
-    event.preventDefault();
-    //event.preventDefault();
+
 
 
     var newSize = document.getElementById("size").value;
@@ -16,38 +21,44 @@ function pizzaOrder() {
     var newDeliver = document.getElementById("deliver").checked;
     var newPickUp = document.getElementById("pickUp").checked;
     var total = document.getElementById("number").value;
-    var newMark;
+    //else if (document.getElementById("size").value = 1) {
+    //     alert("Order cannot be completed. PLease double check the form. ");
 
-    if (total === '') {
+    if (document.getElementById("size").value === "1") {
+        alert("Please select the size of the pizza:");
+
+
+    } else if (document.getElementById("crust").value === "2") {
+        alert("Please select the crust of the pizza:");
+
+
+    } else if (document.getElementById("topping").value === "3") {
+        alert("Please select the topping of the pizza:");
+
+
+    } else if (total === '') {
         alert("Please Input how many pizzas you want :");
     } else {
-        for (var i = 0; i < total; i++) {
-            newMark = new pizza(newSize, newCrust, newTopping)
-                //order.push(newMark);
 
-            $(document).ready(function() {
-                $("ol").append("<li>" + newMark.size + " " + newMark.crust + " " + newMark.topping + " " + "</li>");
-                //$("#size").empty();
-                //$("#crust").empty();
-                //$("#topping").empty();
-            });
-            document.getElementById("size") = null;
-        }
+        newMark = new pizza(newSize, newCrust, newTopping);
+
+        //document.getElementById("demo").innerHTML = document.getElementById("crust").value;
+
+        $(document).ready(function() {
+            $("ul").append("<li>" + total + " " + newMark.size + " sized pizza with " + newMark.crust + " crust and  " + newMark.topping + " toppings " + "</li>");
+        });
+
+        alert("Order placed successfully. \nClick CHECKOUT to view your orders ");
+
 
     }
+
+    document.getElementById("size").value = "1";
+    document.getElementById("crust").value = "2";
+    document.getElementById("topping").value = "3";
+    document.getElementById("number").value = ''
 }
 
-// function checkout() {
-//     for (var add = 0; add < order.length; add++) {
-//         $(document).ready(function() {
-//             $("ol").append("<li>" + order[add] + "</li>");
-//         });
-//     };
+pizza.prototype.price = function() {
 
-// }
-// for (var add = 0; add < order.length; add++) {
-
-//     //         $(document).ready(function() {
-//     //             $("ol").append("<li>" + num + "</li>");
-//     //         });
-//     //     }
+}
