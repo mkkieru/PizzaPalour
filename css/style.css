@@ -4,7 +4,7 @@
     background-color: grey;
 }
 
-img {
+.icon {
     float: left;
     height: 70px;
     width: 70px;
@@ -35,10 +35,19 @@ img {
 
 .bei {
     background-color: burlywood;
-    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.pizza-pics {
+    height: 400px;
+    width: 15%;
+    padding: 10px;
+}
+
+.pizza-pics :hover {
+    opacity: 0.5;
 }
 
 .submission-form {
