@@ -45,7 +45,7 @@ function pizzaOrder() {
             $("ol").append("<li>" + total + " " + newMark.size + " sized pizza with " + newMark.crust + " crust and  " + newMark.topping + " toppings " + "</li>");
         });
 
-        alert("Your order has been recorder. \nYou can make more orders or click \"CHECKOUT\" ");
+        alert("Your order has been recorder. \nYou can make more orders or click \"CHECKOUT\" to view orders made. ");
 
 
     }
@@ -186,5 +186,6 @@ function pizzaOrder() {
 $(document).ready(function() {
     $("#toggle").click(function() {
         $("ol").slideUp(500).slideDown(500);
+        $("#demo").slideUp(500).slideDown(500);
     });
 });
