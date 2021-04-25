@@ -6,7 +6,7 @@ function pizza(size, crust, topping) {
 
 function pizzaOrder() {
 
-
+    event.preventDefault();
     //Variable declaration
     var newSize = document.getElementById("size").value;
     var newCrust = document.getElementById("crust").value;
@@ -42,7 +42,7 @@ function pizzaOrder() {
 
 
         $(document).ready(function() {
-            $("ul").append("<li>" + total + " " + newMark.size + " sized pizza with " + newMark.crust + " crust and  " + newMark.topping + " toppings " + "</li>");
+            $("ol").append("<li>" + total + " " + newMark.size + " sized pizza with " + newMark.crust + " crust and  " + newMark.topping + " toppings " + "</li>");
         });
 
         alert("Your order has been recorder. \nYou can make more orders or click \"CHECKOUT\" ");
@@ -64,6 +64,7 @@ function pizzaOrder() {
         } else if (newMark.topping === "Mushrooms") {
 
             price += 50;
+            present = price * total;
 
         } else if (newMark.topping === "Sausage") {
 
@@ -102,6 +103,7 @@ function pizzaOrder() {
         } else if (newMark.topping === "Mushrooms") {
 
             price += 100;
+            present = price * total;
 
         } else if (newMark.topping === "Sausage") {
 
@@ -132,7 +134,6 @@ function pizzaOrder() {
     } else {
 
         price += 800;
-        present = price * total;
         if (newMark.topping === "Pepperoni") {
 
             price += 200;
@@ -141,6 +142,7 @@ function pizzaOrder() {
         } else if (newMark.topping === "Mushrooms") {
 
             price += 150;
+            present = price * total;
 
         } else if (newMark.topping === "Sausage") {
 
@@ -169,7 +171,7 @@ function pizzaOrder() {
         }
 
     }
-    document.getElementById("demo").innerHTML = present + " Ksh";
+    document.getElementById("demo").innerHTML = "TOTAL PRICE = " + present + " Ksh";
 
 
     document.getElementById("size").value = "1";
@@ -178,62 +180,11 @@ function pizzaOrder() {
     document.getElementById("number").value = '';
     document.getElementById("pickUp").checked = false;
     document.getElementById("deliver").checked = false;
-}
-
-pizza.prototype.price = function() {
-
+    event.preventDefault()
 }
 
 $(document).ready(function() {
     $("#toggle").click(function() {
-        $("ul").show(500);
+        $("ol").slideUp(500).slideDown(500);
     });
 });
-
-function checkout() {
-
-}
-
-// var price = 0;
-
-// if (newMark.size === "SMALL") {
-
-//     price += 400;
-//     if (newMark.topping === "Pepperoni") {
-
-//         price += 100;
-
-//     } else if (newMark.topping === "Mushrooms") {
-
-//         price += 50;
-
-//     } else if (newMark.topping === "Sausage") {
-
-//         price += 100;
-
-//     } else if (newMark.topping === "Bacon") {
-
-//         price += 100;
-
-//     } else if (newMark.topping === "Extra cheese") {
-
-//         price += 80;
-
-//     } else if (newMark.topping === "Black olives") {
-
-//         price += 70;
-
-//     } else if (newMark.topping === "Green peppers") {
-
-//         price += 50;
-//     }
-
-// } else if (newMark.size === "MEDIUM") {
-
-//     price += 600;
-
-// } else {
-
-//     price += 800;
-
-// }
