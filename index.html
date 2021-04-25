@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="./img/12-04.jpg">
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/script.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <title>Pizza Palour</title>
 </head>
 
-<body>
+<body style="text-align: center;">
 
     <header class="container">
         <img src="./img/ivan-torres-MQUqbmszGGM-unsplash (1).jpg" alt="">
@@ -33,6 +33,9 @@
 
     <div class="bei">
         <h2>PRICES ARE AS FOLLOWS :</h2>
+
+
+
     </div>
 
 
@@ -137,68 +140,71 @@
 
 
 
+    <div class="submission-form">
+        <div class="row">
+
+            <div class="col-md-6">
+                <h3><strong>PLACE AN ORDER</strong></h3>
+                <label for="size">Select size desired </label>
+                <select class="input" id="size">
+                        <option value="1"></option>
+                        <option>SMALL</option>
+                        <option >MEDIUM</option>
+                        <option >LARGE</option>
+                    </select>
 
 
 
+                <label for="crust">Select crust desired </label>
+                <select class="input" id="crust">
+                        <option value="2"> </option>
+                        <option >CRISPY</option>
+                        <option >STUFFED</option>
+                        <option >GLUTEN-FREE</option>
+                    </select>
 
 
 
+                <label for="topping">Select desired toppings</label>
+                <select class="input" id="topping">
+                        <option value="3"></option>
+                        <option >Pepperoni</option>
+                        <option >Mushrooms</option>
+                        <option >Sausage</option>
+                        <option >Bacon</option>
+                        <option >Extra cheese</option>
+                        <option >Black olives</option>
+                        <option >Green peppers</option>
+                    </select>
 
+                <label for="number">How many pizzas</label>
+                <input type="number" name="" class="input" id="number">
 
+                <label for="delivery">delivered</label>
+                <input class="delivery-options " type="radio" name="1" id="deliver">
 
+                <label for="delivery">Pick up</label>
+                <input class="delivery-options " type="radio" name="1" id="pickUp">
 
-    <form id="submission-form">
-        <label for="size">Select size desired </label>
-        <select class="input" id="size">
-                <option value="1"></option>
-                <option>SMALL</option>
-                <option >MEDIUM</option>
-                <option >LARGE</option>
-        </select>
+                <button class="mine" onclick="pizzaOrder()">Place order </button>
 
-        <label for="crust">Select crust desired </label><br>
-        <select class="input" id="crust">
-                <option value="2"> </option>
-                <option >CRISPY</option>
-                <option >STUFFED</option>
-                <option >GLUTEN-FREE</option>
-        </select>
+                <button class="mine" id="toggle" onclick="checkout()"> CHECKOUT</button>
 
-        <label for="topping">Select desired toppings</label>
-        <select class="input" id="topping">
-            <option value="3"></option>
-            <option >Pepperoni</option>
-            <option >Mushrooms</option>
-            <option >Sausage</option>
-            <option >Bacon</option>
-            <option >Extra cheese</option>
-            <option >Black olives</option>
-            <option >Green peppers</option>
-        </select>
+            </div>
 
-        <label for="number">How many pizzas</label>
-        <input class="input" type="number" name="" id="number">
+            <div class="col-md-6">
 
-        <div class="delivery-options">
-            <label for="delivery">delivered</label>
-            <input type="radio" name="1" id="deliver">
+                <h3 id="hidden"><strong>YOUR ORDERS WILL BE DEISPLAYED HERE :</strong></h3>
 
-            <label for="delivery">Pick up</label>
-            <input type="radio" name="1" id="pickUp">
+                <ol style="list-style-type: none; display: none;"></ol>
+                <p id="demo">
+
+                </p>
+            </div>
         </div>
+    </div>
 
-        <button class="btns" onclick="pizzaOrder()">Place order </button>
-        <button class="btns" id="toggle" onclick="checkout()"> CHECKOUT</button>
 
-        <p id="hidden">
-            These are your orders
-        </p>
-
-        <ul style="list-style-type: none; display: none;"></ul>
-        <p id="demo">
-
-        </p>
-    </form>
 
 </body>
 
