@@ -45,7 +45,7 @@ function pizzaOrder() {
             $("ol").append("<li>" + total + " " + newMark.size + " sized pizza with " + newMark.crust + " crust and  " + newMark.topping + " toppings " + "</li>");
         });
 
-        alert("Your order has been recorder. \nYou can make more orders or click \"CHECKOUT\" to view orders made. ");
+        alert("Your order has been recorded. \nYou can make more orders or click \"CHECKOUT\" to view orders made. ");
 
 
     }
