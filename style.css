@@ -25,11 +25,11 @@
 }
 
 .showCase {
-    color: wheat;
     background-image: url(/ivan-torres-MQUqbmszGGM-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    color: wheat;
     height: 400px;
     font-size: 20px;
 }
@@ -62,10 +62,9 @@
     /*max-width: 800px;
     margin: 3rem auto;
     /*border: 2px solid #E74C3C;*/
+    background-image: url(/PizzaFirePlace.jpg);
     text-align: justify;
     padding: 2rem;
-    opacity: 1;
-    background-image: url(/PizzaFirePlace.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
