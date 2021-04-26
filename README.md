@@ -1,11 +1,12 @@
-# My-Project
+# Pizza Palour
 Project entails boilerplate code for MPFT41/42 morning stand up session on remote repositories. Languages used are HTML and Custom CSS. Topics covered include HTML tags and Intro to CSS.
 ## Prerequisites
 Basic Git knowledge, including an installed version of Git.
 ##### Technologies Used
 - HTML & CSS
+- JS & JQuery
 ##### Setup Instructions and Installation
-- Clone this repository to a location in your file system. `git clone https://github.com/YomZsamora/my-project.git`
+- Clone this repository to a location in your file system. `git clone https://github.com/mkkieru/PizzaPalour.git`
 - Open terminal command line then navigate to the root folder of the application. `cd my-project`
 - Open `index.html` on your browser.
 ## Development
