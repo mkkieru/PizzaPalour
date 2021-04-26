@@ -1,5 +1,5 @@
 # Pizza Palour
-Project entails boilerplate code for MPFT41/42 morning stand up session on remote repositories. Languages used are HTML and Custom CSS. Topics covered include HTML tags and Intro to CSS.
+Project entails an online web application that allows users to make pizza orders online and request for deliveries.
 ## Prerequisites
 Basic Git knowledge, including an installed version of Git.
 ##### Technologies Used
